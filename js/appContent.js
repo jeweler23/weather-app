@@ -1,0 +1,16 @@
+export const createContent = (data) =>{
+    const main =document.createElement('main')
+    const section =document.createElement('section')
+    const container =document.createElement('div')
+    const inner =document.createElement('div')
+    const iconBlock =document.createElement('img')
+    const temterature =document.createElement('h2')
+    const units =document.createElement('span')
+    const description =document.createElement('p')
+    const weatherInfo =document.createElement('div')
+    const weatherInfoList =document.createElement('ul')
+    const weatherInfoWind =document.createElement('li')
+    const weatherInfoPressure =document.createElement('li')
+    const weatherInfoHumidity =document.createElement('li')
+    const weatherInfochanceofRain =document.createElement('li')
+}
