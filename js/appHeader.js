@@ -56,12 +56,12 @@ export const createHeader = (city) => {
             return;
         }
         try{
-            const weather = await getWeatherData(searchInput.value);
+            const weather = await getWeatherData(searchInput.value.trim());
             if(weather.message){
                 showError(weather.message);
                 return; 
             }
-            resetWeatherContent(weather.name, weather)
+            resetWeatherContent(weather.name.trim(), weather)
         } catch (error){
             console.log(error)
         }
