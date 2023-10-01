@@ -1,4 +1,4 @@
-import { directionOfWind } from "./helper.js";
+import { capitalizeFirstLetter, directionOfWind } from "./helper.js";
 
 export const createContent = (data) =>{
     const main =document.createElement('main');
@@ -31,7 +31,7 @@ export const createContent = (data) =>{
     weatherInfoClouds.classList.add('weather-info__item');
 
     temterature.textContent = Math.floor(data.main.temp); //получаем значение температуры из объекта
-    description.textContent = data.weather[0].description;
+    description.textContent = capitalizeFirstLetter(data.weather[0].description);
     iconBlock.src = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`; //массив weather
     units.textContent = 'o';
 
