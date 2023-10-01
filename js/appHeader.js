@@ -89,7 +89,6 @@ export const createHeader = (city) => {
         unitsC.classList.remove('unit-current');
         document.querySelector('.weather__units').textContent = 'F'
         const temterature = document.querySelector('.weather__temperature');
-        console.log(temterature)
         const convertedTemperature = cToF(+temterature.textContent);
         temterature.textContent = Math.round(convertedTemperature)
     })
