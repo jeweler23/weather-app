@@ -56,12 +56,12 @@ export const createHeader = (city) => {
             return;
         }
         try{
-            const city = await getWeatherData(searchInput.value);
-            if(city.message){
-                showError(city.message);
-                return;
+            const weather = await getWeatherData(searchInput.value);
+            if(weather.message){
+                showError(weather.message);
+                return; 
             }
-            resetWeatherContent(city.name, city)
+            resetWeatherContent(weather.name, weather)
         } catch (error){
             console.log(error)
         }
@@ -94,7 +94,7 @@ export const createHeader = (city) => {
     })
 
     window.addEventListener('click',(e)=>{
-        if(e.target === searchInput || e.target === searchBlock || e.target === cityChange){
+        if(e.target === searchInput || e.target === searchBtn || e.target === cityChange){
             return;
         }
         else{
