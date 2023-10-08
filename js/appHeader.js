@@ -61,7 +61,7 @@ export const createHeader = (city) => {
                 showError(weather.message);
                 return; 
             }
-            resetWeatherContent(weather.name.trim(), weather)
+            resetWeatherContent(weather.name.trim(), weather) //трим убрать  можно думаю
         } catch (error){
             console.log(error)
         }
